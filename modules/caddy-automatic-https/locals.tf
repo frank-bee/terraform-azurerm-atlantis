@@ -56,9 +56,9 @@ locals {
     volumes = merge({
       caddy-data = {
         mount_path           = "/data/caddy"
-        storage_account_name = local.caddy_persistence_storage_account.name
-        storage_account_key  = local.caddy_persistence_storage_account.key
-        share_name           = local.caddy_persistence_storage_account.share_name
+        storage_account_name = null // local.caddy_persistence_storage_account.name
+        storage_account_key  = null //local.caddy_persistence_storage_account.key
+        share_name           = null //local.caddy_persistence_storage_account.share_name
       }
       caddy-config = {
         mount_path = "/etc/caddy"
