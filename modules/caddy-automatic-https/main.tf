@@ -4,6 +4,7 @@ data "azurerm_resource_group" "this" {
   name = var.resource_group_name
 }
 
+/*
 module "caddy_persistence_storage_account" {
   source  = "getindata/storage-account/azurerm"
   version = "1.7.1"
@@ -19,6 +20,7 @@ module "caddy_persistence_storage_account" {
     quota = 1
   }]
 }
+*/
 
 module "this_atlantis" {
   source  = "../../"
