@@ -27,6 +27,7 @@ locals {
 
   atlantis_port = try(var.atlantis_container.ports[0].port, 4141)
 
+/*
   caddy_persistence_storage_account = {
     name = (var.caddy_persistence_storage_account == null
       ? module.caddy_persistence_storage_account.storage_account_name
@@ -38,6 +39,7 @@ locals {
     )
     share_name = var.caddy_persistence_storage_account == null ? "caddy" : var.caddy_persistence_storage_account.share_name
   }
+*/
 
   caddyfile_base64_encoded = coalesce(
     var.caddyfile.base64_encoded,
