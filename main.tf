@@ -11,7 +11,7 @@ module "atlantis_repo_config" {
 }
 
 module "azure_container_group" {
-  source  = "github.com/frank-bee/terraform-azurerm-container-group"
+  source  = "../terraform-azurerm-container-group"
 
   context = module.this.context
 
